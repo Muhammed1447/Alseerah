@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102d28">
+<title>السيرة النبوية | الأسئلة والأجوبة</title>
+<style>
+:root{--ink:#172c28;--muted:#667872;--green:#176b50;--green2:#e7f5ed;--red:#b42332;--red2:#fff0f0;--gold:#c5a15a;--paper:#fbfaf6;--line:#e5e8e1;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 8% 0%,#e4eee5 0,transparent 32%),radial-gradient(ellipse at 100% 20%,#f2ead7 0,transparent 28%),var(--paper);color:var(--ink);font-family:"Tahoma","Arial",sans-serif;line-height:1.85}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #c5a15a;outline-offset:3px}
+.hero{background:linear-gradient(130deg,#0c2723 0%,#174b3e 55%,#21644f 100%);color:white;padding:46px 18px 42px;position:relative;overflow:hidden;text-align:center;border-bottom:4px solid #c5a15a;box-shadow:0 12px 34px #102d281c}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff20;border-radius:50%;left:-75px;top:-120px;box-shadow:0 0 0 24px #ffffff08,0 0 0 48px #ffffff06}
+.bism{color:#f2d99a;font-size:1.15rem;letter-spacing:.04em;margin:0 0 12px}.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.3;margin:0;font-weight:800}.subtitle{font-size:1.2rem;color:#e5eadd;margin:8px 0 22px}.meta{max-width:900px;margin:0 auto;color:#e1eae4;font-size:.98rem}.meta p{margin:5px}.meta strong{color:#f2d99a}.credits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:26px;text-align:center}.credit-block{padding:13px 15px;border:1px solid #ffffff25;border-radius:14px;background:linear-gradient(145deg,#ffffff0e,#ffffff06);backdrop-filter:blur(3px)}.credit-block:first-child{grid-column:1/-1}.credit-label{color:#f2d99a!important;font-weight:800;font-size:.92rem;letter-spacing:.02em;margin:0 0 5px!important}.credit-note{color:#d1e0d7;font-size:.9rem}
+main{max-width:980px;margin:26px auto;padding:0 16px 48px}.intro,.quiz-card,.result{background:var(--white);border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 36px #173d2a0d}
+.intro{padding:20px 24px;margin-bottom:18px}.intro h2{margin:0 0 6px;font-size:1.15rem;color:var(--green)}.intro p{margin:0;color:#485b54}
+.toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#ffffffeb;border:1px solid var(--line);border-radius:17px;padding:13px;margin-bottom:16px;box-shadow:0 8px 25px #173d2a08}
+.modes{display:flex;gap:8px;flex-wrap:wrap}.mode,.utility{border:1px solid #d7e0d9;background:#fff;color:var(--ink);padding:8px 15px;border-radius:11px;font-weight:700}.mode.active{background:var(--green);color:#fff;border-color:var(--green)}.utility{background:#f6f4ec}
+.stats{display:flex;gap:14px;align-items:center;color:var(--muted);font-size:.95rem}.stat strong{color:var(--ink);font-variant-numeric:tabular-nums}
+.progress{height:7px;background:#e8ede8;border-radius:20px;overflow:hidden;margin:0 0 16px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),#72ad84);transition:width .25s}
+.quiz-card{padding:clamp(18px,4vw,32px);min-height:360px;border-top:3px solid #d1b36e}.q-top{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:.9rem}.pill{border:1px solid #e6dfc9;background:#fbf7e9;color:#6c5725;padding:3px 10px;border-radius:30px}.q-title{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.75;margin:18px 0 20px;font-weight:800}.statement{border-right:4px solid var(--gold);background:#fbf9f2;padding:14px 16px;border-radius:8px;margin-bottom:16px}
+.answers{display:grid;gap:10px}.option{width:100%;text-align:right;display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:linear-gradient(135deg,#fff,#fdfdfb);border:1px solid #dfe5df;border-radius:13px;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s;line-height:1.8;box-shadow:0 2px 6px #183d2b05}.option:hover:not(:disabled){border-color:#76a88e;background:#f8fcf9;transform:translateY(-1px);box-shadow:0 5px 14px #183d2b0b}.letter{display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:8px;background:#eef2ed;color:#43574d;font-weight:800}.option.correct{border-color:#3c9b68;background:var(--green2);color:#125a3c}.option.correct .letter{background:#c6ead4;color:#125a3c}.option.wrong{border-color:#db6b74;background:var(--red2);color:#92202b}.option.wrong .letter{background:#ffd9dc;color:#92202b}.option:disabled{cursor:default}
+.feedback{margin-top:18px;padding:15px 17px;border-radius:12px;border:1px solid var(--line);display:none}.feedback.show{display:block}.feedback.good{background:var(--green2);border-color:#b8dfc6}.feedback.bad{background:var(--red2);border-color:#f1c0c4}.feedback h3{margin:0 0 5px;font-size:1rem}.feedback.good h3{color:#176b50}.feedback.bad h3{color:#a12531}.feedback p{margin:4px 0}.exact{margin-top:8px;padding-top:8px;border-top:1px solid #00000012}
+.bottom-actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px}.primary{border:0;border-radius:12px;background:var(--green);color:#fff;font-weight:800;padding:11px 22px}.primary:disabled{opacity:.4;cursor:not-allowed}.secondary{border:1px solid #d6dfd8;border-radius:12px;background:#fff;padding:10px 18px;color:var(--ink);font-weight:700}
+.result{display:none;text-align:center;padding:34px 20px;margin-top:18px;border-top:3px solid #d1b36e}.result.show{display:block}.score-ring{width:136px;height:136px;margin:0 auto 15px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--green) var(--pct,0%),#e8eee8 0);position:relative}.score-ring:before{content:"";position:absolute;inset:9px;border-radius:50%;background:#fff}.score-ring div{position:relative}.score-ring strong{display:block;font-size:2rem;line-height:1.2}.result h2{margin:8px 0;color:var(--green)}.result p{color:var(--muted);margin:6px}.result .primary{margin-top:12px}.source-note{margin-top:18px;padding:15px 18px;color:#5c6a63;font-size:.9rem}.source-note summary{cursor:pointer;font-weight:800;color:#43574d}.source-note p{margin-bottom:0}.footer{text-align:center;color:#738079;padding:22px 10px 34px;font-size:.9rem}.footer strong{color:var(--green)}
+@media(max-width:600px){.hero{padding:32px 14px}.intro{padding:17px}.toolbar{align-items:flex-start}.stats{width:100%;justify-content:space-between}.q-top{align-items:flex-start}.quiz-card{padding:18px}.bottom-actions button{flex:1}.meta{font-size:.9rem}.credits{grid-template-columns:1fr;gap:8px;margin-top:20px}.credit-block:first-child{grid-column:auto}.credit-block{padding:11px 12px}}
+@media print{.toolbar,.bottom-actions,.footer{display:none}.hero{print-color-adjust:exact}.quiz-card,.intro{box-shadow:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <p class="bism">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+  <h1>السيرة النبوية</h1>
+  <p class="subtitle">الأسئلة والأجوبة</p>
+  <div class="meta credits">
+    <div class="credit-block">
+      <p class="credit-label">أستاذ المقرر</p>
+      <p><strong>فضيلة الشيخ الأستاذ الدكتور حسن بن عبدالحميد بن عبدالحكيم بخاري</strong> – حفظه الله –</p>
+      <p class="credit-note">(مدرّس بالحرمين وأستاذ بجامعة أم القرى)</p>
+    </div>
+    <div class="credit-block">
+      <p class="credit-label">إعداد المقرر</p>
+      <p><strong>سعادة الأستاذ الدكتور عبد الله بن محمد الدروبي</strong></p>
+      <p class="credit-note">(رئيس القسم بمعهد اللغة العربية، جامعة أم القرى)</p>
+    </div>
+    <div class="credit-block">
+      <p class="credit-label">مراجعة</p>
+      <p><strong>أ. د. أحمد بن مشعل الغامدي</strong></p>
+      <p><strong>د. حزيمة بنت صافي سراج</strong></p>
+    </div>
+    <div class="credit-block">
+      <p class="credit-label">تصميم الموقع الإلكتروني وتطويره</p>
+      <p><strong>محمد الفريد (محمد كفو)</strong></p>
+      <p class="credit-note">(المستشار التقني بوزارة الحج والعمرة)</p>
+    </div>
+    <div class="credit-block">
+      <p class="credit-label">إعداد الأجوبة</p>
+      <p><strong>مالك ساغو</strong></p>
+      <p class="credit-note">(طالب بمعهد اللغة العربية، جامعة أم القرى)</p>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="intro">
+    <h2>المقدمة</h2>
+    <p>الحمد لله، والصلاة والسلام على رسول الله ﷺ. هذا الموقع جهد لتيسير دراسة السيرة النبوية لطلاب العلم وللأمة الإسلامية. نسأل الله التوفيق.</p>
+  </section>
+  <section class="toolbar" aria-label="إعدادات الاختبار">
+    <div class="modes">
+      <button class="mode active" id="mcqMode" type="button">اختيار من متعدد</button>
+      <button class="mode" id="tfMode" type="button">صح أو خطأ</button>
+    </div>
+    <div class="stats">
+      <span class="stat">الدرجة: <strong id="score">0</strong></span>
+      <span class="stat">تمت الإجابة: <strong id="answered">0</strong> / <strong id="total">65</strong></span>
+    </div>
+    <button class="utility" id="restartTop" type="button">إعادة الاختبار</button>
+  </section>
+  <div class="progress" aria-label="التقدم"><span id="progressBar"></span></div>
+  <section class="quiz-card" id="quizCard">
+    <div class="q-top"><span id="qNumber">السؤال 1 من 65</span><span class="pill" id="topic">تعريف السيرة النبوية</span></div>
+    <h2 class="q-title" id="question"></h2>
+    <div id="statement" class="statement" hidden></div>
+    <div class="answers" id="answers"></div>
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+    <div class="bottom-actions">
+      <button class="secondary" id="prevBtn" type="button">السابق</button>
+      <button class="primary" id="nextBtn" type="button">السؤال التالي</button>
+    </div>
+  </section>
+  <section class="result" id="result">
+    <div class="score-ring" id="scoreRing"><div><strong id="finalScore">0/65</strong><span>الدرجة</span></div></div>
+    <h2>بارك الله فيك.</h2>
+    <p id="resultText"></p>
+    <p>نسأل الله أن يوفقكم للعلم النافع والعمل الصالح.</p>
+    <button class="primary" id="reviewBtn" type="button">مراجعة الإجابات</button>
+    <button class="secondary" id="restartBtn" type="button">إعادة الاختبار</button>
+  </section>
+</main>
+<footer class="footer">موقع تعليمي للمراجعة والتدريب · <strong>بارك الله فيكم</strong></footer>
+<script>
+const bank = [{"q": "ما هي السيرة لغة؟", "a": "السيرة لغة هي الطريق والحالة التي يسير عليها الإنسان", "topic": "تعريف السيرة النبوية"}, {"q": "ما هي السيرة اصطلاحا؟", "a": "هي دراسة حياة النبي محمد ﷺ وأحواله وأخباره منذ مولده إلى وفاته وما يتصل بدعوته وأخلاقه وغزواته وشمائله", "topic": "تعريف السيرة النبوية"}, {"q": "لماذا ندرس السيرة النبوية؟", "a": "1. لتحقيق الإيمان بالنبي صلى الله عليه وسلم؛ 2. لفهم القرآن الكريم؛ 3. لمحبة النبي صلى الله عليه وسلم؛ 4. لتطبيق سنته في حياتنا؛ 5. للعلم والمعرفة بشأن النبي صلى الله عليه وسلم؛ 6. للاقتداء والتأسي بالنبي صلى الله عليه وسلم؛ 7. للدفاع عنه ونصرته صلى الله عليه وسلم؛ 8. لاحترامه وتعظيمه صلى الله عليه وسلم؛ 9. لتكون أخلاقنا أحسن وأفضل؛ 10. لمعرفة الدين معرفة التامة الصحيحة", "topic": "تعريف السيرة النبوية"}, {"q": "في أيّ الكتب نجد السيرة النبوية؟", "a": "1. القرآن الكريم. 2. كتب الأحاديث الشريفة. 3. كتب السيرة النبوية. 4. كتب الشمائل المحمدية. 5. كتب المغازي. 6. كتب المعجزات النبوية. 7. كتب الخصائص النبوية.", "topic": "تعريف السيرة النبوية"}, {"q": "أذكر نسب النبي صلى الله عليه وسلم؟", "a": "هو محمد بن عبد الله بن عبد المطلب بن هاشم بن عبد مناف بن قصي بن مرة بن كعب بن لؤي بن غالب بن فهر بن مالك بن النضر بن كنانة بن خزيمة بن مدركة بن مضر بن نزار بن معد بن عدنان.", "topic": "نشأة النبي ﷺ"}, {"q": "متى ولد النبي صلى الله عليه وسلم؟", "a": "ولد النبي صلى الله عليه وسلم في يوم الاثنين، الثاني عشر من شهر ربيع الأول من عام الفيل.", "topic": "نشأة النبي ﷺ"}, {"q": "اذكر اسم أم النبي صلى الله عليه وسلم وأمه بالرضاعة؟", "a": "أمه آمنة بنت وهب بن عبد مناف بن زهرة بن كلاب، وأمه بالرضاعة حليمة السعدية من بني سعد.", "topic": "نشأة النبي ﷺ"}, {"q": "كم سنة مكث النبي ﷺ في بادية بني سعد وماذا حدث له هناك؟", "a": "مكث النبي صلى الله عليه وسلم في بادية بني سعد خمس سنوات، ووقعت له هناك حادثة شق الصدر، فأتاه جبريل عليه السلام وهو يلعب مع الغلمان، فشق صدره واستخرج من قلبه علقة، وقال: هذا حظ الشيطان منك، ثم غسله بماء زمزم، ثم أعاده إلى مكانه.", "topic": "نشأة النبي ﷺ"}, {"q": "متى؟ وأين ماتت أم النبي صلى الله عليه وسلم؟", "a": "ماتت أم النبي صلى الله عليه وسلم آمنة بنت وهب بالأبواء وعمره صلى الله عليه وسلم ست سنوات.", "topic": "نشأة النبي ﷺ"}, {"q": "من الذي كفل النبي صلى الله عليه وسلم بعد وفاة أمه؟", "a": "جده عبد المطلب هو الذي تولّى كفالته بعد وفاة أمه.", "topic": "نشأة النبي ﷺ"}, {"q": "ماذا عمل النبي صلى الله عليه وسلم قبل النبوة؟", "a": "عمل صلى الله عليه وسلم قبل النبوة في رعي الأغنام.", "topic": "نشأة النبي ﷺ"}, {"q": "ماذا عمل النبي صلى الله عليه وسلم قبل النبوة؟", "a": "قبل النبوة عمل النبي صلى الله عليه وسلم في رعي الغنم ثم عمل في التجارة.", "topic": "حياة النبي ﷺ"}, {"q": "ما حلف الفضول؟", "a": "هو حلف عقده عدد من قبائل قريش في مكة لنصرة المظلوم، وردّ الحقوق إلى أصحابها، ومنع الظلم، وكان قبل النبوة.", "topic": "حياة النبي ﷺ"}, {"q": "متى تزوج النبي ﷺ خديجة بنت خويلد رضي الله عنها؟", "a": "تزوج النبي ﷺ أم المؤمنين خديجة بنت خويلد رضي الله عنها وعمره خمسة وعشرون عاما.", "topic": "حياة النبي ﷺ"}, {"q": "كم أولاد النبي صلى الله عليه؟ واذكر أسماءهم؟", "a": "أولاد النبي صلى الله عليه وسلم سبعة، من البنين ثلاثة: القاسم، وعبد الله، وإبراهيم، ومن البنات أربع: رقية، وزينب، وأم كلثوم، وفاطمة ـ رضي الله عنهن.", "topic": "حياة النبي ﷺ"}, {"q": "كم كان عمر النبي صلى الله عليه وسلم عند مشاركته في بناء الكعبة؟", "a": "كان عمر النبي صلى الله عليه وسلم خمسا وثلاثين سنة عند مشاركته في بناء الكعبة وكان ذلك قبل النبوة بخمس سنوات.", "topic": "حياة النبي ﷺ"}, {"q": "كيف عصم الله نبيه صلى الله عليه وسلم؟", "a": "حفظ الله نبيه صلى الله عليه وسلم من التلوث بما كان عليه أهل الجاهلية من أعمال الشرك وسوء الأخلاق، فكان يبغض الأصنام ولا يعبدها، ولم يشرب الخمر قط.", "topic": "حياة النبي ﷺ"}, {"q": "ماذا رأت أم النبي صلى الله عليه وسلم حين كانت حاملا به؟", "a": "رأت نورا يخرج منها أضاءت منه قصور الشام.", "topic": "علامات النبوة"}, {"q": "ماذا حدث للنبي صلى الله عليه وسلم عندما كان في بادية بني سعد؟", "a": "شق صدره وختم بخاتم النبوة.", "topic": "علامات النبوة"}, {"q": "ما خاتم النبوة", "a": "هو قطعة بارزة من اللحم، عليها شعر عند كتفه الأيسر.", "topic": "علامات النبوة"}, {"q": "من رأى النبي صلى الله عليه وسلم عندما خرج مع عمه أبي طالب إلى الشام؟", "a": "رآه بحيرا الراهب.", "topic": "علامات النبوة"}, {"q": "ماذا شهد بحيرا الراهب للنبي صلى الله عليه وسلم؟", "a": "شهد بحيرا الراهب بأن محمدا صلى الله عليه وسلم سيكون نبيا، لما رأى فيه من علامات النبوة، ونصح عمه أبا طالب بالرجوع به إلى مكة خوفا عليه.", "topic": "علامات النبوة"}, {"q": "بماذا أخبر بحيرا الراهب أبا طالب ومن معه؟", "a": "أخبرهم بعلامات تدل على نبوته كخاتم النبوة.", "topic": "علامات النبوة"}, {"q": "بماذا حذر بحيرا الراهب أبا طالب؟", "a": "حذّره من الذهاب به إلى الشام خوفا عليه من الروم.", "topic": "علامات النبوة"}, {"q": "ماذا كانت هذه العلامات؟", "a": "كانت إشارات إلى نبوته صلى الله عليه وسلم.", "topic": "علامات النبوة"}, {"q": "اذكر خمسا من صفات النبي ﷺ الخَلقية؟", "a": "1. لم يكن ﷺ طويلا ولا قصيرا. 2. كان ﷺ أبيض في بياضه حمرة. 3. كان ﷺ عريض الظهر. 4. كان ﷺ شعره وسطا بين الخشن والناعم. 5. كان ﷺ كثير شعر اللحية، قليل الشيب.", "topic": "صفات النبي ﷺ الخَلقية"}, {"q": "اذكر آية وحديثا يدل على خلق النبي ﷺ؟", "a": "من الآيات التي تدل على خلق النبي ﷺ قوله تعالى (وإنك لعلى خلق عظيم) وفي الحديث: سئلت أم المؤمنين عائشة ـ رضي الله عنها ـ عن خلقه، فقالت: (كان خلقه القرآن)", "topic": "صفات النبي ﷺ الخُلقية"}, {"q": "اذكر مثالا واحدا لكل خلق من الأخلاق النبوية الشريفة؟", "a": "1. الحلم: ما انتقم لنفسه أبدا قط حتى تنتهك حرمات الله فينتقم لله. 2. الشجاعة: كان الصحابة ـ رضي الله عنهم ـ تحتمون به عند اشتداد الحرب. 3. الحياء: كان النبي ﷺ أشد حياء من العذراء. 4. الرحمة: إنه ﷺ كان رحيما بالأطفال يقبلهم ويضمّهم ويحملهم ويداعبهم. 5. الوفاء: حفظه لجميل زوجته خديجة رضي الله عنها؛ فكان يذكرها بالخير حتى بعد وفاتها وكان يذبح الشاة ويهدي من لحمها إلى صديقاتها. 6. البشاشة: كان ﷺ كثير التبسّم؛ قال جرير بن عبد الله رضي الله عنه: ما حجبني رسول ﷺ منذ أسلمت ولا رآني إلا تبسّم.", "topic": "صفات النبي ﷺ الخُلقية"}, {"q": "كيف كانت بداية الوحي؟", "a": "كانت بداية الوحي للنبي صلى الله عليه وسلم بالرؤيا الصادقة فكان إذا رأى شيئا في منامه تحقق.", "topic": "بداية الوحي"}, {"q": "متى نزل الوحي على النبي صلى الله عليه وسلم في غار حراء", "a": "لما بلغ النبي صلى الله عليه وسلم أربعين سنة، وفي يوم الإثنين في العشر الأواخر من شهر رمضان.", "topic": "بداية الوحي"}, {"q": "من هو الرجل الذي ذهب إليه النبي صلى الله عليه وسلم مع خديجة رضي الله عنها؟ ولماذا؟", "a": "ذهب النبي صلى الله عليه وسلم مع أم المؤمنين خديجة رضي الله عنها إلى ابن عمها ورقة بن نوفل. وسبب ذهابهما إليه أنه كان على دين النصارى، وعنده علم بالتوراة والإنجيل.", "topic": "بداية الوحي"}, {"q": "ماذا قال ورقة بن نوفل للنبي صلى الله عليه وسلم؟", "a": "قال له: إن قومه سوف يخرجونه من مكة، فتعجب النبي صلى الله عليه وسلم من ذلك، وقال له: «أو مخرجيّ هم؟» فقال ورقة: نعم، فكل من دعا الناس إلى دين يخالف دينهم فإنهم يعادونه.", "topic": "بداية الوحي"}, {"q": "متى؟ وأين رأى النبي صلى الله عليه وسلم جبريل عليه السلام مرة ثانية", "a": "رآه النبي صلى الله عليه وسلم في طريق عودته إلى مكة، بين السماء والأرض في صورته الحقيقية.", "topic": "بداية الوحي"}, {"q": "من هم السابقون إلى الإسلام؟", "a": "أول من أسلم من النساء خديجة بنت خويلد رضي الله عنها. أول من أسلم من الرجال أبو بكر الصديق رضي الله عنه. أول من أسلم من الصبيان علي بن أبي طالب رضي الله عنه. وزيد بن حارث رضي الله عنه كان من أوائل من أسلم وكان مولى النبي صلى الله عليه وسلم.", "topic": "الدعوة المكية"}, {"q": "أين كان يجتمع النبي ﷺ مع الصحابة السابقين إلى الإسلام؟", "a": "كان النبي ﷺ يجتمع مع الصحابة رضوان الله عليهم في دار الأرقم بن أبي الأرقم.", "topic": "الدعوة المكية"}, {"q": "كم سنة استمرت الدعوة سرا؟ وبماذا أمر الله بعد ذلك", "a": "استمرت الدعوة سرا ثلاث سنين، ثم أمر الله نبيه ﷺ بالجهر بالدعوة بقوله: ﴿فاصدع بما تؤمر وأعرض عن المشركين﴾ «الحجر 94».", "topic": "الدعوة المكية"}, {"q": "ما سبب نزول سورة المسد", "a": "لما نزل قول الله تعالى: ﴿وأنذر عشيرتك الأقربين﴾ «الشعراء 214» دعا النبي صلى الله عليه وسلم قريشا وحذرهم من عذاب الله وقال: «إني نذير لكم بين يدي عذاب شديد»، فقال أبو لهب: «تبا لك ألهذا جمعتنا»، فنزلت سورة المسد ذما لأبي لهب وزوجته بسبب عذابهما للنبي ﷺ وأذيتهما له.", "topic": "الدعوة المكية"}, {"q": "أين كانت هجرة الصحابة الأولى في مكة؟", "a": "كانت هجرة الصحابة الأولى إلى أرض الحبشة.", "topic": "الدعوة المكية"}, {"q": "ماذا قال النبي ﷺ لأصحابه عند الهجرة إلى الحبشة؟", "a": "قال لهم: «لو خرجتم إلى أرض الحبشة فإن بها ملكا لا يظلم عند أحد».", "topic": "الدعوة المكية"}, {"q": "متى مات أبو طالب؟ وهل أسلم؟", "a": "في السنة العاشرة من البعثة توفي أبو طالب عم النبي ﷺ وقد دعاه إلى الإسلام وهو على فراش الموت ولم يسلم.", "topic": "الدعوة المكية"}, {"q": "لماذا حزن النبي ﷺ على موت عمه أبي طالب", "a": "حزن النبي ﷺ على موت عمه أبي طالب لأنه مات ولم يسلم ولأنه كان يحميه ويدافع عنه من أذى قريش.", "topic": "الدعوة المكية"}, {"q": "متى ماتت خديجة رضي الله عنها؟", "a": "ماتت خديجة رضي الله عنها في السنة العاشرة من البعثة، وقبل الهجرة بثلاث سنوات.", "topic": "الدعوة المكية"}, {"q": "متى خرج النبي ﷺ إلى الطائف؟ ولماذا؟", "a": "خرج النبي ﷺ إلى الطائف بعد وفاة عمه أبي طالب الذي كان يحميه وينصره، ليدعو أهلها إلى الإسلام، ولكنهم قابلوا دعوته بالرد والأذى.", "topic": "الدعوة المكية"}, {"q": "ماذا قال ملك الجبال للنبي ﷺ؟ وبماذا أجابه؟", "a": "قال ملك الجبال للنبي ﷺ: «إن شئت أطبقت على أهل مكة الأخشبين»، فقال: بل أرجو أن يخرج الله من أصلابهم من يعبد الله وحده لا يشرك به شيئا.", "topic": "الدعوة المكية"}, {"q": "متى وقعت حادثة الإسراء والمعراج؟", "a": "وقعت حادثة الإسراء والمعراج بعد عودة النبي ﷺ من الطائف.", "topic": "الدعوة المكية"}, {"q": "من رأى النبي ﷺ من الأنبياء في رحلة المعراج؟", "a": "رأى في المعراج من الأنبياء آدم، ويحيى، وعيسى، ويوسف، وإدريس، وهارون، وموسى، وإبراهيم، عليهم السلام ـ وسلم عليهم جميعا.", "topic": "الدعوة المكية"}, {"q": "لماذا كان النبي ﷺ يدعو القبائل في الحج؟", "a": "لأنه ﷺ يغتنم اجتماع العرب في الحج ليدعوهم إلى الإيمان به ونصرته حتى يبلغ الدين للناس.", "topic": "الهجرة إلى المدينة"}, {"q": "ماذا حصل في السنة الحادية عشرة من البعثة مع الخزرج؟", "a": "لقي النبي ﷺ في السنة الحادية عشرة ستة رجال من الخزرج في موسم الحج فاستجابوا لدعوته وآمنوا به ثم رجعوا إلى المدينة يدعون أهلها إلى الإسلام.", "topic": "الهجرة إلى المدينة"}, {"q": "متى كانت بيعة العقبة الأولى؟ وكم عدد الأوس والخزرج؟", "a": "كانت بيعة العقبة الأولى في موسم الحج من السنة الثانية عشرة من البعثة، بايع اثنا عشر رجلا من الأوس والخزرج.", "topic": "الهجرة إلى المدينة"}, {"q": "كم الذين بايعوا في العقبة الثانية؟ ومتى؟", "a": "في ليلة اليوم الثاني عشر من أيام التشريق في السنة الثالثة عشرة من البعثة بايع النبي ﷺ ثلاثة وسبعين من الأنصار بيعة العقبة الثانية.", "topic": "الهجرة إلى المدينة"}, {"q": "من الصحابي الذي أرسله النبي ﷺ سفيرا للإسلام في المدينة؟ ومتى؟", "a": "هو الصحابي الجليل مصعب بن عمير رضي الله عنه، كانت في السنة الثانية عشرة من البعثة.", "topic": "الهجرة إلى المدينة"}, {"q": "على ماذا بايع الأوس والخزرج النبي ﷺ", "a": "بايع الأوس والخزرج النبي ﷺ على السمع والطاعة وعدم منازعة ولاة الأمر، والأمر بالمعروف والنهي عن المنكر، ونصرة النبي ﷺ إذا هاجر إلى المدينة.", "topic": "الهجرة إلى المدينة"}, {"q": "لماذا اجتمعت قريش وفكرت في قتل النبي ﷺ؟", "a": "لما رأى المشركون هجرة المسلمين إلى المدينة خافوا أن تقوى شوكتهم، فاجتمعوا في دار الندوة واتفقوا على قتل النبي ﷺ.", "topic": "الهجرة إلى المدينة"}, {"q": "بماذا أوحى الله إلى نبيه ﷺ عندئذ؟", "a": "أوحى الله إلى نبيه ﷺ بما أراده المشركون.", "topic": "الهجرة إلى المدينة"}, {"q": "من الذي نام على فراشه ليلة الهجرة؟", "a": "أمر النبي ﷺ عليا أن ينام على فراشه.", "topic": "الهجرة إلى المدينة"}, {"q": "من هم الذين خدموا النبي ﷺ وأبا بكر في غار ثور؟", "a": "كانت أسماء بنت أبي بكر تأتيهما بالطعام، وعبد الله يأتيهما بالأخبار، وعامر بن فهيرة يأتيهما باللبن.", "topic": "الهجرة إلى المدينة"}, {"q": "أين اختبأ النبي ﷺ وصاحبه قبل الهجرة", "a": "اختبأ النبي ﷺ وصاحبه قبل الهجرة في جبل ثور.", "topic": "الهجرة إلى المدينة"}, {"q": "ما الجائزة التي وضعتها قريش في البحث عن النبي ﷺ وصاحبه؟", "a": "وضعت قريش جائزة قدرها مئة ناقة لمن تأتي بالنبي ﷺ وصاحبه أبي بكر الصديق رضي الله عنه.", "topic": "الهجرة إلى المدينة"}, {"q": "ماذا قال أبو بكر لما خاف من وصول قريش إليهما في الغار؟ وبم أجابه النبي ﷺ؟", "a": "قال أبو بكر رضي الله عنه: لو أن أحدهم نظر إلى قدميه لأبصرنا، فقال النبي ﷺ: «يا أبا بكر ما ظنك باثنين الله ثالثهما».", "topic": "الهجرة إلى المدينة"}, {"q": "كم يوما مكث النبي ﷺ وصاحبه في غار ثور؟", "a": "مكث النبي ﷺ والصديق رضي الله عنه في الغار ثلاثة أيام.", "topic": "الهجرة إلى المدينة"}, {"q": "من أدركهما في الطريق؟", "a": "أدركهما في الطريق سراقة بن مالك.", "topic": "الهجرة إلى المدينة"}, {"q": "ما قصة أم معبد في قصة الهجرة؟", "a": "مر النبي ﷺ والصديق رضي الله عنه في طريقهما إلى المدينة على خيمة أم معبد، وقد كان عندها شاة هزيلة ليس في ضرعها لبن، فمسح ﷺ بيده على ضرعها وسمّى الله ودعا لها، فدرت حليبا كثيرا، فسقاها وسقى أصحابه، وشرب منه، ثم ملأ لها الإناء، وانصرف.", "topic": "الهجرة إلى المدينة"}, {"q": "متى وصل النبي ﷺ إلى قباء؟", "a": "وصل النبي ﷺ إلى قباء يوم الاثنين الثاني عشر من شهر ربيع الأول.", "topic": "الهجرة إلى المدينة"}, {"q": "أين نزل النبي ﷺ في المدينة؟", "a": "نزل النبي ﷺ في دار أبي أيوب الأنصاري رضي الله عنه.", "topic": "الهجرة إلى المدينة"}, {"q": "ما أول شيء عمله النبي ﷺ لما وصل المدينة؟", "a": "بنى المسجد النبوي في الموضع الذي بركت ناقته.", "topic": "الهجرة إلى المدينة"}];
+const $ = id => document.getElementById(id);
+let mode='mcq', index=0, order=bank.map((_,i)=>i), responses={}, reviewed=false;
+const letters=['أ','ب','ج','د'];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function answersFor(i){
+ const correct=bank[i].a;
+ // Keep distractors clearly distinct from the answer and avoid another question's answer
+ // from the same topic, where it could also seem correct.
+ if(i===22){
+   return shuffle([
+     correct,
+     "حذّره من الذهاب به إلى الشام خوفا عليه من الروم.",
+     "رآه بحيرا الراهب عندما خرج مع عمه أبي طالب إلى الشام.",
+     "كانت هجرة الصحابة الأولى إلى أرض الحبشة."
+   ]);
+ }
+ const pool=shuffle(bank.map((x,j)=>({a:x.a,j,topic:x.topic})).filter(x=>x.j!==i&&x.topic!==bank[i].topic&&x.a!==correct));
+ let choices=[correct];
+ for(const x of pool){if(!choices.includes(x.a)) choices.push(x.a); if(choices.length===4)break}
+ return shuffle(choices);
+}
+function getStatement(i){
+ const truth=(i%2===0);
+ if(truth) return {text:bank[i].a, truth:true};
+ const candidates=bank.map((x,j)=>x).filter((x,j)=>j!==i&&x.topic===bank[i].topic&&x.a!==bank[i].a);
+ const pool=candidates.length?candidates:bank.filter((x,j)=>j!==i&&x.a!==bank[i].a);
+ return {text:pool[(i*7)%pool.length].a, truth:false};
+}
+function stats(){
+ const vals=Object.values(responses);
+ $('score').textContent=vals.filter(v=>v.correct).length;
+ $('answered').textContent=vals.length;
+ $('progressBar').style.width=(vals.length/bank.length*100)+'%';
+}
+function render(){
+ const real=order[index], item=bank[real], saved=responses[real];
+ $('qNumber').textContent=`السؤال ${index+1} من ${bank.length}`;
+ $('topic').textContent=item.topic;
+ $('question').textContent=item.q;
+ $('answers').innerHTML='';
+ $('statement').hidden=mode!=='tf';
+ $('statement').textContent='';
+ $('feedback').className='feedback'; $('feedback').innerHTML='';
+ if(mode==='mcq'){
+   let opts=saved?saved.options:answersFor(real);
+   opts.forEach((opt,k)=>{
+     const b=document.createElement('button');b.type='button';b.className='option';
+     b.innerHTML=`<span class="letter">${letters[k]}</span><span>${esc(opt)}</span>`;
+     if(saved){b.disabled=true;if(opt===item.a)b.classList.add('correct');else if(opt===saved.chosen)b.classList.add('wrong')}
+     b.addEventListener('click',()=>answerMCQ(real,opt,opts));
+     $('answers').appendChild(b);
+   });
+   if(saved) showFeedback(item,saved.correct);
+ } else {
+   const stmt=saved?saved.statement:getStatement(real);
+   $('statement').textContent=stmt.text;
+   ['صح','خطأ'].forEach((label,k)=>{
+     const chosen=(k===0);
+     const b=document.createElement('button');b.type='button';b.className='option';
+     b.innerHTML=`<span class="letter">${chosen?'✓':'✕'}</span><span>${label}</span>`;
+     if(saved){b.disabled=true;const isCorrectChoice=(chosen===stmt.truth);if(isCorrectChoice)b.classList.add('correct');else if(chosen===saved.chosen)b.classList.add('wrong')}
+     b.addEventListener('click',()=>answerTF(real,chosen,stmt));
+     $('answers').appendChild(b);
+   });
+   if(saved) showFeedback(item,saved.correct);
+ }
+ $('prevBtn').disabled=index===0;
+ $('nextBtn').textContent=index===bank.length-1?'عرض النتيجة':'السؤال التالي';
+ stats();
+}
+function showFeedback(item,correct){
+ const f=$('feedback');f.className='feedback show '+(correct?'good':'bad');
+ f.innerHTML=`<h3>${correct?'إجابة صحيحة ✓':'إجابة غير صحيحة ✕'}</h3><p>${correct?'أحسنت، بارك الله فيك.':'الإجابة الصحيحة من الملف:'}</p><p class="exact"><strong>الإجابة كما وردت في مادة المراجعة:</strong><br>${esc(item.a)}</p>`;
+}
+function answerMCQ(real,chosen,opts){
+ if(responses[real])return;
+ responses[real]={chosen,options:opts,correct:chosen===bank[real].a};
+ render();
+}
+function answerTF(real,chosen,stmt){
+ if(responses[real])return;
+ responses[real]={chosen,statement:stmt,correct:chosen===stmt.truth};
+ render();
+}
+function switchMode(m){mode=m;$('mcqMode').classList.toggle('active',m==='mcq');$('tfMode').classList.toggle('active',m==='tf');render()}
+function finish(){
+ $('quizCard').style.display='none';$('result').classList.add('show');
+ const score=Object.values(responses).filter(v=>v.correct).length;
+ $('finalScore').textContent=`${score}/${bank.length}`;
+ $('scoreRing').style.setProperty('--pct',(score/bank.length*100)+'%');
+ $('resultText').textContent=`أجبت عن ${Object.keys(responses).length} من ${bank.length} سؤالًا. درجتك الحالية: ${score} من ${bank.length}.`;
+}
+function restart(){index=0;order=bank.map((_,i)=>i);responses={};$('quizCard').style.display='block';$('result').classList.remove('show');render();window.scrollTo({top:0,behavior:'smooth'})}
+$('mcqMode').addEventListener('click',()=>switchMode('mcq'));
+$('tfMode').addEventListener('click',()=>switchMode('tf'));
+$('prevBtn').addEventListener('click',()=>{if(index>0){index--;render()}});
+$('nextBtn').addEventListener('click',()=>{if(index<bank.length-1){index++;render()}else finish()});
+$('restartTop').addEventListener('click',restart);$('restartBtn').addEventListener('click',restart);
+$('reviewBtn').addEventListener('click',()=>{$('result').classList.remove('show');$('quizCard').style.display='block';index=0;render()});
+$('total').textContent=bank.length;
+render();
+</script>
+</body>
+</html>
